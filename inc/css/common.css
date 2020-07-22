@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+/* Font */
+ @font-face {
+	font-family:noto;
+	src:url('../font/NotoSans-Thin.eot');
+	src:local(※),
+		url('../font/NotoSans-Thin.eot?#iefix') format('embedded-opentype'),
+		url('../font/NotoSans-Thin.woff') format('woff'),
+		url('../font/NotoSans-Thin.woff2') format('woff2'),
+		url('../font/NotoSans-Thin.otf') format('opentype');
+	font-weight:100;
+	font-style:normal;
+}
+@font-face {
+	font-family:noto;
+	src:url('../font/NotoSans-Light.eot');
+	src:local(※),
+		url('../font/NotoSans-Light.eot?#iefix') format('embedded-opentype'),
+		url('../font/NotoSans-Light.woff') format('woff'),
+		url('../font/NotoSans-Light.woff2') format('woff2'),
+		url('../font/NotoSans-Light.otf') format('opentype');
+	font-weight:300;
+	font-style:normal;
+}
+@font-face {
+	font-family:noto;
+	src:url('../font/NotoSans-Regular.eot');
+	src:local(※),
+		url('../font/NotoSans-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../font/NotoSans-Regular.woff') format('woff'),
+		url('../font/NotoSans-Regular.woff2') format('woff2'),
+		url('../font/NotoSans-Regular.otf') format('opentype');
+	font-weight:400;
+	font-style:normal;
+}
+@font-face {
+	font-family:noto;
+	src:url('../font/NotoSans-Medium.eot');
+	src:local(※),
+		url('../font/NotoSans-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../font/NotoSans-Medium.woff') format('woff'),
+		url('../font/NotoSans-Medium.woff2') format('woff2'),
+		url('../font/NotoSans-Medium.otf') format('opentype');
+	font-weight:500;
+	font-style:normal;
+}
+@font-face {
+	font-family:noto;
+	src:url('../font/NotoSans-Bold.eot');
+	src:local(※),
+		url('../font/NotoSans-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../font/NotoSans-Bold.woff') format('woff'),
+		url('../font/NotoSans-Bold.woff') format('woff2'),
+		url('../font/NotoSans-Bold.otf') format('opentype');
+	font-weight:700;
+	font-style:normal;
+}
+
+/* RESET */
+html, body{font-size:14px;color:#333;line-height:1;-webkit-text-size-adjust:none;}
+body, div, form, p, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, em, p, span, textarea, pre, label, fieldset, th, td, button, a, input, select, hr{margin:0;padding:0;font-family:noto, sans-serif;word-break:break-all;}
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption{display:block;}
+h1, h2, h3, h4, h5, h6, strong, th{font-weight:normal;}
+em, span, strong, a, button, i{font-size:100%;}
+em, address{font-style:normal;}
+ul, ol, dl{list-style:none;}
+fieldset, img, hr, button{border:0;}
+img, input, textarea, select{vertical-align:top;}
+table{width:100%;table-layout:fixed;border-collapse:collapse;border-spacing:0;}
+caption, legend{overflow:hidden;width:0;height:0;padding:0;font-size:0;line-height:0;}
+a{text-decoration:none;color:#333;}
+a:hover{text-decoration:none;}
+button{margin:0;padding:0;background:none;border-radius:0;color:#333;cursor:pointer;}
+/* input, textarea, select{-webkit-appearance:none;appearance:none;} */
+input[type="text"]::-ms-clear, input[type="password"]::-ms-clear, input[type="text"]::-ms-reveal, input[type="password"]::-ms-reveal{display:none;}
+.blind{overflow:hidden;position:absolute;top:0;left:0;width:0;height:0;font-size:0;line-height:0;}
+.clfix:after{content:'';display:block;height:0;clear:both;visibility:hidden;}
+#skipNavi{position:absolute;top:0;left:0;width:100%;}
+#skipNavi a{position:absolute;top:-10000px;left:0;display:block;width:100%;font-size:12px;text-align:center;z-index:500;}
+#skipNavi a:hover, #skipNavi a:focus, #skipNavi a:active{position:absolute;top:0;padding:5px 0;background:#1d60a7;color:#fff;z-index:500;}
+
+/* FORM */
+input, select{box-sizing:border-box;width:160px;height:40px;padding:0 10px;border:1px solid #ccc;font-size:14px;color:#666;line-height:2.8;}
+input + label{font-size:14px;color:#666;line-height:2.9;}
+input:disabled{color:#aaa;}
+input:disabled,
+input:disabled + .btnCalendar,
+input:read-only,
+input:read-only + .btnCalenda{background-color:#f3f3f3;}
+select{padding:0 0 0 10px;color:#666;}
+textarea{resize:none;box-sizing:border-box;width:100%;min-height:150px;padding:10px;border:1px solid #ccc;font-size:14px;color:#666;}
