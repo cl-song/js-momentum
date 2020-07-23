@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.form,
+.greetingTxt {
+    display: none;
+}
+
+.form.on,
+.greetingTxt.on {
+    display: block;
+}
