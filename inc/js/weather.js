@@ -38,9 +38,10 @@ function getWeather(lat, lon) {
     ).then( function(response) {
         return response.json();
     }).then( function(json) {
-        const temperature = json.main.temp;
-        const place = json.name;
-        weather.innerText = `${temperature} @ ${place}`;
+        const userWeather = json.weather[0].main;
+        const userPlace = json.name;
+        const userCountry = json.sys.country;
+        weather.innerText = `${userWeather} / ${userPlace}, ${userCountry}`;
     });
 }
 
