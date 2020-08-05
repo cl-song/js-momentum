@@ -1,11 +1,27 @@
 @charset "utf-8";
 
+/* LAYOUT */
 #wrap {
     overflow-y: hidden;
     position: relative;
     height: 100vh;
 }
 
+.contents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 360px;
+    text-align: center;
+    color: #fff;
+    transform: translate(-50%, -50%);
+}
+
+.contents > div + div {
+    margin-top: 30px;
+}
+
+/* STYLE */
 .js-bg {
     position: absolute;
     top: 50%;
@@ -14,16 +30,100 @@
     width: 100%;
 }
 
-.contents {
-    position: relative;
+.weatherTxt {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 100;
 }
 
-.form,
-.greetingTxt {
+.clockWrap .clockTit {
+    display: inline-block;
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.greetingWrap .form,
+.greetingWrap .greetingTxt {
     display: none;
 }
 
-.form.on,
-.greetingTxt.on {
+.greetingWrap .form.on,
+.greetingWrap .greetingTxt.on {
     display: block;
+}
+
+.input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    color: #eee;
+    text-align: center;
+}
+
+.input::placeholder {
+    color: #bbb;
+}
+
+.greetingWrap .greetingTxt { 
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    line-height: 2.2;
+}
+
+.toDoList {
+
+}
+
+.toDoList {
+    margin-top: 10px;
+}
+
+.toDoList li + li {
+    margin-top: 5px;
+}
+
+.toDoList .listTxt {
+    overflow: hidden;
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.toDoList .btnDelete {
+    position: relative;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    outline: 0;
+    vertical-align: middle;
+}
+
+.toDoList .btnDelete:before,
+.toDoList .btnDelete:after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 7px;
+    display: inline-block;
+    width: 14px;
+    height: 2px;
+    background: #ffa8a8;
+    transform: rotate(45deg);
+}
+
+.toDoList .btnDelete:after {
+    right: 7px;
+    left: auto;
+    transform: rotate(-45deg);
 }

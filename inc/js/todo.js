@@ -2,7 +2,7 @@ const toDoContainer = document.querySelector('.toDoWrap');
 const toDoForm = toDoContainer.querySelector('.js-toDoForm');
 const toDoInput = toDoForm.querySelector('.js-toDoInput');
 const toDoListContainer = document.createElement('ul');
-toDoListContainer.className = 'js-toDoList';
+toDoListContainer.className = 'toDoList js-toDoList';
 let toDoArr = [];
 
 // 로컬스토리지 - 저장된 ToDoList 있는지 체크
@@ -45,6 +45,7 @@ function getToDos(id, text) {
     listLi.id = id;
     const listTxt = document.createElement('span');
     listTxt.innerText = text;
+    listTxt.className = 'listTxt';
     const listBtn = document.createElement('button');
     listBtn.className = 'btnDelete';
 
